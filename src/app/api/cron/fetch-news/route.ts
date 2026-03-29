@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 import { fetchFeed } from '@/lib/rss';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   // Protect with secret header for cron jobs
   const secret = request.headers.get('x-cron-secret');
