@@ -1,0 +1,161 @@
+{
+  "common": {
+    "siteName": "Haiti Transparans",
+    "tagline": "Transparencia en el gobierno haitiano",
+    "search": "Buscar",
+    "loading": "Cargando...",
+    "readMore": "Leer más",
+    "viewAll": "Ver todo",
+    "back": "Volver",
+    "filter": "Filtrar",
+    "noResults": "Sin resultados",
+    "error": "Se produjo un error"
+  },
+  "nav": {
+    "home": "Inicio",
+    "map": "Mapa",
+    "officials": "Funcionarios",
+    "elections": "Elecciones",
+    "news": "Noticias",
+    "about": "Acerca de"
+  },
+  "home": {
+    "hero": {
+      "title": "Haiti Transparans",
+      "subtitle": "Siga su gobierno local — promesas, casos legales y órdenes del día",
+      "exploreMap": "Explorar el mapa",
+      "viewOfficials": "Ver funcionarios"
+    },
+    "stats": {
+      "departments": "Departamentos",
+      "communes": "Comunas",
+      "sections": "Secciones Comunales",
+      "officials": "Funcionarios"
+    },
+    "latestNews": "Últimas noticias",
+    "mapTitle": "Explorar por región"
+  },
+  "map": {
+    "title": "Mapa de Haití",
+    "clickDepartment": "Haga clic en un departamento para explorar",
+    "clickCommune": "Haga clic en una comuna para ver detalles",
+    "departments": "Departamentos",
+    "arrondissements": "Arrondissements",
+    "communes": "Comunas",
+    "sections": "Secciones Comunales",
+    "reset": "Restablecer mapa",
+    "zoom": {
+      "in": "Acercar",
+      "out": "Alejar"
+    }
+  },
+  "officials": {
+    "title": "Funcionarios del gobierno",
+    "searchPlaceholder": "Buscar por nombre...",
+    "roles": {
+      "PRESIDENT": "Presidente",
+      "PRIME_MINISTER": "Primer Ministro",
+      "MINISTER": "Ministro",
+      "SENATOR": "Senador",
+      "DEPUTY": "Diputado",
+      "MAYOR": "Alcalde",
+      "DEPUTY_MAYOR": "Alcalde Adjunto",
+      "CASEC_PRESIDENT": "Presidente CASEC",
+      "CASEC_MEMBER": "Miembro CASEC",
+      "ASEC_PRESIDENT": "Presidente ASEC",
+      "ASEC_MEMBER": "Miembro ASEC",
+      "DELEGATE": "Delegado",
+      "VICE_DELEGATE": "Vice Delegado"
+    },
+    "status": {
+      "ACTIVE": "Activo",
+      "INACTIVE": "Inactivo",
+      "SUSPENDED": "Suspendido",
+      "RESIGNED": "Renunciado",
+      "TERM_ENDED": "Mandato terminado"
+    },
+    "tabs": {
+      "bio": "Biografía",
+      "promises": "Promesas",
+      "legalCases": "Casos legales",
+      "meetings": "Reuniones"
+    },
+    "termStart": "Inicio del mandato",
+    "termEnd": "Fin del mandato",
+    "party": "Partido político"
+  },
+  "promises": {
+    "title": "Seguimiento de promesas",
+    "categories": {
+      "INFRASTRUCTURE": "Infraestructura",
+      "EDUCATION": "Educación",
+      "HEALTH": "Salud",
+      "SECURITY": "Seguridad",
+      "ECONOMY": "Economía",
+      "ENVIRONMENT": "Medio ambiente",
+      "GOVERNANCE": "Gobernanza",
+      "SOCIAL": "Social",
+      "OTHER": "Otro"
+    },
+    "status": {
+      "NOT_STARTED": "No iniciado",
+      "IN_PROGRESS": "En progreso",
+      "KEPT": "Cumplida",
+      "BROKEN": "Incumplida",
+      "COMPROMISED": "Comprometida",
+      "STALLED": "Bloqueada"
+    },
+    "summary": "{kept} cumplidas / {broken} incumplidas / {pending} pendientes",
+    "noPromises": "No hay promesas registradas"
+  },
+  "legal": {
+    "title": "Casos legales",
+    "court": "Tribunal",
+    "caseNumber": "Número de caso",
+    "dateFiled": "Fecha de presentación",
+    "status": {
+      "ALLEGED": "Alegado",
+      "UNDER_INVESTIGATION": "Bajo investigación",
+      "CHARGED": "Acusado",
+      "TRIAL": "Juicio",
+      "CONVICTED": "Condenado",
+      "ACQUITTED": "Absuelto",
+      "DISMISSED": "Desestimado",
+      "APPEAL": "Apelación"
+    },
+    "noCases": "No hay casos legales registrados"
+  },
+  "meetings": {
+    "title": "Órdenes del día",
+    "date": "Fecha",
+    "location": "Lugar",
+    "agenda": "Orden del día",
+    "noMeetings": "No hay reuniones registradas"
+  },
+  "elections": {
+    "title": "Elecciones",
+    "upcoming": "Próximas",
+    "active": "Activas",
+    "completed": "Completadas",
+    "cancelled": "Canceladas",
+    "compare": "Comparar candidatos",
+    "selectCandidates": "Seleccione candidatos para comparar",
+    "types": {
+      "PRESIDENTIAL": "Presidencial",
+      "LEGISLATIVE_SENATE": "Legislativo - Senado",
+      "LEGISLATIVE_DEPUTY": "Legislativo - Diputado",
+      "MUNICIPAL": "Municipal",
+      "LOCAL_CASEC": "Local - CASEC",
+      "LOCAL_ASEC": "Local - ASEC"
+    },
+    "noElections": "No hay elecciones registradas"
+  },
+  "news": {
+    "title": "Noticias",
+    "source": "Fuente",
+    "published": "Publicado",
+    "noArticles": "No hay artículos disponibles",
+    "allSources": "Todas las fuentes",
+    "readOriginal": "Leer artículo original"
+  }
+}

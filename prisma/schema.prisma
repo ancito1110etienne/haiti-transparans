@@ -1,0 +1,385 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Geographic Hierarchy ───────────────────────────────────────
+
+model Department {
+  id               String           @id @default(cuid())
+  nameHt           String
+  nameFr           String
+  nameEn           String
+  nameEs           String
+  slug             String           @unique
+  code             String           @unique
+  capital          String?
+  population       Int?
+  area             Float?
+  geoJsonFeatureId String?
+  arrondissements  Arrondissement[]
+  officials        Official[]
+  elections        Election[]
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  @@map("departments")
+}
+
+model Arrondissement {
+  id           String     @id @default(cuid())
+  nameHt       String
+  nameFr       String
+  nameEn       String
+  nameEs       String
+  slug         String     @unique
+  code         String     @unique
+  departmentId String
+  department   Department @relation(fields: [departmentId], references: [id], onDelete: Cascade)
+  communes     Commune[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  @@index([departmentId])
+  @@map("arrondissements")
+}
+
+model Commune {
+  id                 String             @id @default(cuid())
+  nameHt             String
+  nameFr             String
+  nameEn             String
+  nameEs             String
+  slug               String             @unique
+  code               String             @unique
+  population         Int?
+  arrondissementId   String
+  arrondissement     Arrondissement     @relation(fields: [arrondissementId], references: [id], onDelete: Cascade)
+  sectionsCommunales SectionCommunale[]
+  officials          Official[]
+  elections          Election[]
+  geoJsonFeatureId   String?
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  @@index([arrondissementId])
+  @@map("communes")
+}
+
+model SectionCommunale {
+  id               String     @id @default(cuid())
+  nameHt           String
+  nameFr           String
+  nameEn           String
+  nameEs           String
+  slug             String     @unique
+  code             String     @unique
+  communeId        String
+  commune          Commune    @relation(fields: [communeId], references: [id], onDelete: Cascade)
+  officials        Official[]
+  geoJsonFeatureId String?
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+
+  @@index([communeId])
+  @@map("sections_communales")
+}
+
+// ─── Officials ──────────────────────────────────────────────────
+
+enum OfficialRole {
+  PRESIDENT
+  PRIME_MINISTER
+  MINISTER
+  SENATOR
+  DEPUTY
+  MAYOR
+  DEPUTY_MAYOR
+  CASEC_PRESIDENT
+  CASEC_MEMBER
+  ASEC_PRESIDENT
+  ASEC_MEMBER
+  DELEGATE
+  VICE_DELEGATE
+}
+
+enum OfficialStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  RESIGNED
+  TERM_ENDED
+}
+
+model Official {
+  id                 String            @id @default(cuid())
+  firstName          String
+  lastName           String
+  role               OfficialRole
+  status             OfficialStatus    @default(ACTIVE)
+  photoUrl           String?
+  email              String?
+  phone              String?
+  bio                String?           @db.Text
+  termStart          DateTime?
+  termEnd            DateTime?
+  party              String?
+  departmentId       String?
+  department         Department?       @relation(fields: [departmentId], references: [id])
+  communeId          String?
+  commune            Commune?          @relation(fields: [communeId], references: [id])
+  sectionCommunaleId String?
+  sectionCommunale   SectionCommunale? @relation(fields: [sectionCommunaleId], references: [id])
+  promises           Promise[]
+  legalCases         LegalCase[]
+  meetingAgendas     MeetingAgenda[]
+  candidacies        Candidacy[]
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
+
+  @@index([role])
+  @@index([communeId])
+  @@index([departmentId])
+  @@index([sectionCommunaleId])
+  @@map("officials")
+}
+
+// ─── Promise Tracking ───────────────────────────────────────────
+
+enum PromiseStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  KEPT
+  BROKEN
+  COMPROMISED
+  STALLED
+}
+
+enum PromiseCategory {
+  INFRASTRUCTURE
+  EDUCATION
+  HEALTH
+  SECURITY
+  ECONOMY
+  ENVIRONMENT
+  GOVERNANCE
+  SOCIAL
+  OTHER
+}
+
+model Promise {
+  id            String          @id @default(cuid())
+  titleHt       String
+  titleFr       String
+  titleEn       String
+  titleEs       String
+  descriptionHt String?         @db.Text
+  descriptionFr String?         @db.Text
+  descriptionEn String?         @db.Text
+  descriptionEs String?         @db.Text
+  status        PromiseStatus   @default(NOT_STARTED)
+  category      PromiseCategory @default(OTHER)
+  sourceUrl     String?
+  datePromised  DateTime?
+  dateUpdated   DateTime?
+  officialId    String
+  official      Official        @relation(fields: [officialId], references: [id], onDelete: Cascade)
+  updates       PromiseUpdate[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  @@index([officialId])
+  @@index([status])
+  @@map("promises")
+}
+
+model PromiseUpdate {
+  id        String   @id @default(cuid())
+  contentHt String   @db.Text
+  contentFr String   @db.Text
+  contentEn String   @db.Text
+  contentEs String   @db.Text
+  sourceUrl String?
+  promiseId String
+  promise   Promise  @relation(fields: [promiseId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@index([promiseId])
+  @@map("promise_updates")
+}
+
+// ─── Legal Cases ────────────────────────────────────────────────
+
+enum CaseStatus {
+  ALLEGED
+  UNDER_INVESTIGATION
+  CHARGED
+  TRIAL
+  CONVICTED
+  ACQUITTED
+  DISMISSED
+  APPEAL
+}
+
+model LegalCase {
+  id            String     @id @default(cuid())
+  titleHt       String
+  titleFr       String
+  titleEn       String
+  titleEs       String
+  descriptionHt String?    @db.Text
+  descriptionFr String?    @db.Text
+  descriptionEn String?    @db.Text
+  descriptionEs String?    @db.Text
+  status        CaseStatus @default(ALLEGED)
+  court         String?
+  caseNumber    String?
+  dateFiled     DateTime?
+  dateUpdated   DateTime?
+  sourceUrl     String?
+  officialId    String
+  official      Official   @relation(fields: [officialId], references: [id], onDelete: Cascade)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@index([officialId])
+  @@index([status])
+  @@map("legal_cases")
+}
+
+// ─── Meeting Agendas ────────────────────────────────────────────
+
+model MeetingAgenda {
+  id         String              @id @default(cuid())
+  titleHt    String
+  titleFr    String
+  titleEn    String
+  titleEs    String
+  date       DateTime
+  location   String?
+  summaryHt  String?             @db.Text
+  summaryFr  String?             @db.Text
+  summaryEn  String?             @db.Text
+  summaryEs  String?             @db.Text
+  officialId String
+  official   Official            @relation(fields: [officialId], references: [id], onDelete: Cascade)
+  items      MeetingAgendaItem[]
+  createdAt  DateTime            @default(now())
+  updatedAt  DateTime            @updatedAt
+
+  @@index([officialId])
+  @@index([date])
+  @@map("meeting_agendas")
+}
+
+model MeetingAgendaItem {
+  id       String        @id @default(cuid())
+  titleHt  String
+  titleFr  String
+  titleEn  String
+  titleEs  String
+  order    Int
+  agendaId String
+  agenda   MeetingAgenda @relation(fields: [agendaId], references: [id], onDelete: Cascade)
+
+  @@index([agendaId])
+  @@map("meeting_agenda_items")
+}
+
+// ─── Elections & Candidates ─────────────────────────────────────
+
+enum ElectionType {
+  PRESIDENTIAL
+  LEGISLATIVE_SENATE
+  LEGISLATIVE_DEPUTY
+  MUNICIPAL
+  LOCAL_CASEC
+  LOCAL_ASEC
+}
+
+enum ElectionStatus {
+  UPCOMING
+  ACTIVE
+  COMPLETED
+  CANCELLED
+}
+
+model Election {
+  id           String         @id @default(cuid())
+  titleHt      String
+  titleFr      String
+  titleEn      String
+  titleEs      String
+  type         ElectionType
+  status       ElectionStatus @default(UPCOMING)
+  date         DateTime?
+  departmentId String?
+  department   Department?    @relation(fields: [departmentId], references: [id])
+  communeId    String?
+  commune      Commune?       @relation(fields: [communeId], references: [id])
+  candidacies  Candidacy[]
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  @@index([status])
+  @@index([type])
+  @@map("elections")
+}
+
+model Candidacy {
+  id         String   @id @default(cuid())
+  officialId String
+  official   Official @relation(fields: [officialId], references: [id], onDelete: Cascade)
+  electionId String
+  election   Election @relation(fields: [electionId], references: [id], onDelete: Cascade)
+  party      String?
+  platformHt String?  @db.Text
+  platformFr String?  @db.Text
+  platformEn String?  @db.Text
+  platformEs String?  @db.Text
+  votes      Int?
+  won        Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([officialId, electionId])
+  @@index([electionId])
+  @@map("candidacies")
+}
+
+// ─── News ───────────────────────────────────────────────────────
+
+model NewsSource {
+  id        String        @id @default(cuid())
+  name      String
+  url       String        @unique
+  feedUrl   String        @unique
+  language  String        @default("fr")
+  active    Boolean       @default(true)
+  articles  NewsArticle[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@map("news_sources")
+}
+
+model NewsArticle {
+  id          String     @id @default(cuid())
+  title       String
+  content     String?    @db.Text
+  summary     String?    @db.Text
+  url         String     @unique
+  imageUrl    String?
+  publishedAt DateTime?
+  sourceId    String
+  source      NewsSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  createdAt   DateTime   @default(now())
+
+  @@index([sourceId])
+  @@index([publishedAt])
+  @@map("news_articles")
+}

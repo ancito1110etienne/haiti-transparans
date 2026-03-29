@@ -1,0 +1,161 @@
+{
+  "common": {
+    "siteName": "Haiti Transparans",
+    "tagline": "Transparency in Haitian government",
+    "search": "Search",
+    "loading": "Loading...",
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "back": "Back",
+    "filter": "Filter",
+    "noResults": "No results found",
+    "error": "An error occurred"
+  },
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "officials": "Officials",
+    "elections": "Elections",
+    "news": "News",
+    "about": "About"
+  },
+  "home": {
+    "hero": {
+      "title": "Haiti Transparans",
+      "subtitle": "Track your local government — promises, legal cases, and meeting agendas",
+      "exploreMap": "Explore the map",
+      "viewOfficials": "View officials"
+    },
+    "stats": {
+      "departments": "Departments",
+      "communes": "Communes",
+      "sections": "Communal Sections",
+      "officials": "Officials"
+    },
+    "latestNews": "Latest News",
+    "mapTitle": "Explore by Region"
+  },
+  "map": {
+    "title": "Map of Haiti",
+    "clickDepartment": "Click a department to explore",
+    "clickCommune": "Click a commune to see details",
+    "departments": "Departments",
+    "arrondissements": "Arrondissements",
+    "communes": "Communes",
+    "sections": "Communal Sections",
+    "reset": "Reset map",
+    "zoom": {
+      "in": "Zoom in",
+      "out": "Zoom out"
+    }
+  },
+  "officials": {
+    "title": "Government Officials",
+    "searchPlaceholder": "Search by name...",
+    "roles": {
+      "PRESIDENT": "President",
+      "PRIME_MINISTER": "Prime Minister",
+      "MINISTER": "Minister",
+      "SENATOR": "Senator",
+      "DEPUTY": "Deputy",
+      "MAYOR": "Mayor",
+      "DEPUTY_MAYOR": "Deputy Mayor",
+      "CASEC_PRESIDENT": "CASEC President",
+      "CASEC_MEMBER": "CASEC Member",
+      "ASEC_PRESIDENT": "ASEC President",
+      "ASEC_MEMBER": "ASEC Member",
+      "DELEGATE": "Delegate",
+      "VICE_DELEGATE": "Vice Delegate"
+    },
+    "status": {
+      "ACTIVE": "Active",
+      "INACTIVE": "Inactive",
+      "SUSPENDED": "Suspended",
+      "RESIGNED": "Resigned",
+      "TERM_ENDED": "Term Ended"
+    },
+    "tabs": {
+      "bio": "Biography",
+      "promises": "Promises",
+      "legalCases": "Legal Cases",
+      "meetings": "Meetings"
+    },
+    "termStart": "Term start",
+    "termEnd": "Term end",
+    "party": "Political party"
+  },
+  "promises": {
+    "title": "Promise Tracker",
+    "categories": {
+      "INFRASTRUCTURE": "Infrastructure",
+      "EDUCATION": "Education",
+      "HEALTH": "Health",
+      "SECURITY": "Security",
+      "ECONOMY": "Economy",
+      "ENVIRONMENT": "Environment",
+      "GOVERNANCE": "Governance",
+      "SOCIAL": "Social",
+      "OTHER": "Other"
+    },
+    "status": {
+      "NOT_STARTED": "Not Started",
+      "IN_PROGRESS": "In Progress",
+      "KEPT": "Kept",
+      "BROKEN": "Broken",
+      "COMPROMISED": "Compromised",
+      "STALLED": "Stalled"
+    },
+    "summary": "{kept} kept / {broken} broken / {pending} pending",
+    "noPromises": "No promises recorded"
+  },
+  "legal": {
+    "title": "Legal Cases",
+    "court": "Court",
+    "caseNumber": "Case number",
+    "dateFiled": "Date filed",
+    "status": {
+      "ALLEGED": "Alleged",
+      "UNDER_INVESTIGATION": "Under Investigation",
+      "CHARGED": "Charged",
+      "TRIAL": "Trial",
+      "CONVICTED": "Convicted",
+      "ACQUITTED": "Acquitted",
+      "DISMISSED": "Dismissed",
+      "APPEAL": "Appeal"
+    },
+    "noCases": "No legal cases recorded"
+  },
+  "meetings": {
+    "title": "Meeting Agendas",
+    "date": "Date",
+    "location": "Location",
+    "agenda": "Agenda",
+    "noMeetings": "No meetings recorded"
+  },
+  "elections": {
+    "title": "Elections",
+    "upcoming": "Upcoming",
+    "active": "Active",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "compare": "Compare Candidates",
+    "selectCandidates": "Select candidates to compare",
+    "types": {
+      "PRESIDENTIAL": "Presidential",
+      "LEGISLATIVE_SENATE": "Legislative - Senate",
+      "LEGISLATIVE_DEPUTY": "Legislative - Deputy",
+      "MUNICIPAL": "Municipal",
+      "LOCAL_CASEC": "Local - CASEC",
+      "LOCAL_ASEC": "Local - ASEC"
+    },
+    "noElections": "No elections recorded"
+  },
+  "news": {
+    "title": "News",
+    "source": "Source",
+    "published": "Published",
+    "noArticles": "No articles available",
+    "allSources": "All sources",
+    "readOriginal": "Read original article"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "common": {
+    "siteName": "Haiti Transparans",
+    "tagline": "Transparans nan gouvènman ayisyen an",
+    "search": "Chèche",
+    "loading": "Ap chaje...",
+    "readMore": "Li plis",
+    "viewAll": "Wè tout",
+    "back": "Retounen",
+    "filter": "Filtre",
+    "noResults": "Pa gen rezilta",
+    "error": "Yon erè te pase"
+  },
+  "nav": {
+    "home": "Akèy",
+    "map": "Kat",
+    "officials": "Ofisyèl",
+    "elections": "Eleksyon",
+    "news": "Nouvèl",
+    "about": "Sou nou"
+  },
+  "home": {
+    "hero": {
+      "title": "Haiti Transparans",
+      "subtitle": "Swiv gouvènman lokal ou a — pwomès, ka legal, ak ajanda reyinyon",
+      "exploreMap": "Ekspore kat la",
+      "viewOfficials": "Wè ofisyèl yo"
+    },
+    "stats": {
+      "departments": "Depatman",
+      "communes": "Komin",
+      "sections": "Seksyon Kominal",
+      "officials": "Ofisyèl"
+    },
+    "latestNews": "Dènye Nouvèl",
+    "mapTitle": "Ekspore pa Rejyon"
+  },
+  "map": {
+    "title": "Kat Ayiti",
+    "clickDepartment": "Klike sou yon depatman pou ekspore",
+    "clickCommune": "Klike sou yon komin pou wè detay",
+    "departments": "Depatman",
+    "arrondissements": "Awondisман",
+    "communes": "Komin",
+    "sections": "Seksyon Kominan",
+    "reset": "Reyinisyalize kat",
+    "zoom": {
+      "in": "Zoome antre",
+      "out": "Zoome deyò"
+    }
+  },
+  "officials": {
+    "title": "Ofisyèl Gouvènman",
+    "searchPlaceholder": "Chèche pa non...",
+    "roles": {
+      "PRESIDENT": "Prezidan",
+      "PRIME_MINISTER": "Premye Minis",
+      "MINISTER": "Minis",
+      "SENATOR": "Senatè",
+      "DEPUTY": "Depite",
+      "MAYOR": "Majistra",
+      "DEPUTY_MAYOR": "Majistra Adjwen",
+      "CASEC_PRESIDENT": "Prezidan CASEC",
+      "CASEC_MEMBER": "Manm CASEC",
+      "ASEC_PRESIDENT": "Prezidan ASEC",
+      "ASEC_MEMBER": "Manm ASEC",
+      "DELEGATE": "Delegue",
+      "VICE_DELEGATE": "Vis Delegue"
+    },
+    "status": {
+      "ACTIVE": "Aktif",
+      "INACTIVE": "Inaktif",
+      "SUSPENDED": "Sispann",
+      "RESIGNED": "Demisyone",
+      "TERM_ENDED": "Manda Fini"
+    },
+    "tabs": {
+      "bio": "Byografi",
+      "promises": "Pwomès",
+      "legalCases": "Ka Legal",
+      "meetings": "Reyinyon"
+    },
+    "termStart": "Kòmanse manda",
+    "termEnd": "Fini manda",
+    "party": "Pati politik"
+  },
+  "promises": {
+    "title": "Swiv Pwomès",
+    "categories": {
+      "INFRASTRUCTURE": "Enfrastrikti",
+      "EDUCATION": "Edikasyon",
+      "HEALTH": "Sante",
+      "SECURITY": "Sekirite",
+      "ECONOMY": "Ekonomi",
+      "ENVIRONMENT": "Anviwònman",
+      "GOVERNANCE": "Gouvènans",
+      "SOCIAL": "Sosyal",
+      "OTHER": "Lòt"
+    },
+    "status": {
+      "NOT_STARTED": "Pa Kòmanse",
+      "IN_PROGRESS": "Ap Fèt",
+      "KEPT": "Kenbe",
+      "BROKEN": "Kase",
+      "COMPROMISED": "Konpwomis",
+      "STALLED": "Bloke"
+    },
+    "summary": "{kept} kenbe / {broken} kase / {pending} an atant",
+    "noPromises": "Pa gen pwomès ki anrejistre"
+  },
+  "legal": {
+    "title": "Ka Legal",
+    "court": "Tribinal",
+    "caseNumber": "Nimewo ka",
+    "dateFiled": "Dat depoze",
+    "status": {
+      "ALLEGED": "Allegasyon",
+      "UNDER_INVESTIGATION": "Anba Envestigasyon",
+      "CHARGED": "Akize",
+      "TRIAL": "Jijman",
+      "CONVICTED": "Kondane",
+      "ACQUITTED": "Akite",
+      "DISMISSED": "Rejte",
+      "APPEAL": "Apèl"
+    },
+    "noCases": "Pa gen ka legal ki anrejistre"
+  },
+  "meetings": {
+    "title": "Ajanda Reyinyon",
+    "date": "Dat",
+    "location": "Kote",
+    "agenda": "Ajanda",
+    "noMeetings": "Pa gen reyinyon ki anrejistre"
+  },
+  "elections": {
+    "title": "Eleksyon",
+    "upcoming": "Kap vini",
+    "active": "Aktif",
+    "completed": "Fini",
+    "cancelled": "Anile",
+    "compare": "Konpare Kandida",
+    "selectCandidates": "Chwazi kandida yo pou konpare",
+    "types": {
+      "PRESIDENTIAL": "Prezidansyèl",
+      "LEGISLATIVE_SENATE": "Legislatif - Sena",
+      "LEGISLATIVE_DEPUTY": "Legislatif - Depite",
+      "MUNICIPAL": "Minisipal",
+      "LOCAL_CASEC": "Lokal - CASEC",
+      "LOCAL_ASEC": "Lokal - ASEC"
+    },
+    "noElections": "Pa gen eleksyon ki anrejistre"
+  },
+  "news": {
+    "title": "Nouvèl",
+    "source": "Sous",
+    "published": "Pibliye",
+    "noArticles": "Pa gen atik disponib",
+    "allSources": "Tout sous",
+    "readOriginal": "Li atik orijinal la"
+  }
+}

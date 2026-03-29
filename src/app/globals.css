@@ -1,13 +1,22 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --haiti-blue: #003F87;
+  --haiti-blue-light: #1A5FAF;
+  --haiti-red: #D21034;
+  --haiti-red-light: #E84363;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-haiti-blue: var(--haiti-blue);
+  --color-haiti-blue-light: var(--haiti-blue-light);
+  --color-haiti-red: var(--haiti-red);
+  --color-haiti-red-light: var(--haiti-red-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,4 +32,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Leaflet fix for Next.js */
+.leaflet-container {
+  z-index: 0;
 }

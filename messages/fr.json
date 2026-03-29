@@ -1,0 +1,161 @@
+{
+  "common": {
+    "siteName": "Haiti Transparans",
+    "tagline": "La transparence dans le gouvernement haïtien",
+    "search": "Rechercher",
+    "loading": "Chargement...",
+    "readMore": "Lire plus",
+    "viewAll": "Voir tout",
+    "back": "Retour",
+    "filter": "Filtrer",
+    "noResults": "Aucun résultat",
+    "error": "Une erreur s'est produite"
+  },
+  "nav": {
+    "home": "Accueil",
+    "map": "Carte",
+    "officials": "Officiels",
+    "elections": "Élections",
+    "news": "Actualités",
+    "about": "À propos"
+  },
+  "home": {
+    "hero": {
+      "title": "Haiti Transparans",
+      "subtitle": "Suivez votre gouvernement local — promesses, affaires judiciaires et ordres du jour",
+      "exploreMap": "Explorer la carte",
+      "viewOfficials": "Voir les officiels"
+    },
+    "stats": {
+      "departments": "Départements",
+      "communes": "Communes",
+      "sections": "Sections Communales",
+      "officials": "Officiels"
+    },
+    "latestNews": "Dernières actualités",
+    "mapTitle": "Explorer par région"
+  },
+  "map": {
+    "title": "Carte d'Haïti",
+    "clickDepartment": "Cliquez sur un département pour explorer",
+    "clickCommune": "Cliquez sur une commune pour voir les détails",
+    "departments": "Départements",
+    "arrondissements": "Arrondissements",
+    "communes": "Communes",
+    "sections": "Sections Communales",
+    "reset": "Réinitialiser la carte",
+    "zoom": {
+      "in": "Zoom avant",
+      "out": "Zoom arrière"
+    }
+  },
+  "officials": {
+    "title": "Officiels du gouvernement",
+    "searchPlaceholder": "Rechercher par nom...",
+    "roles": {
+      "PRESIDENT": "Président",
+      "PRIME_MINISTER": "Premier Ministre",
+      "MINISTER": "Ministre",
+      "SENATOR": "Sénateur",
+      "DEPUTY": "Député",
+      "MAYOR": "Maire",
+      "DEPUTY_MAYOR": "Maire Adjoint",
+      "CASEC_PRESIDENT": "Président CASEC",
+      "CASEC_MEMBER": "Membre CASEC",
+      "ASEC_PRESIDENT": "Président ASEC",
+      "ASEC_MEMBER": "Membre ASEC",
+      "DELEGATE": "Délégué",
+      "VICE_DELEGATE": "Vice-Délégué"
+    },
+    "status": {
+      "ACTIVE": "Actif",
+      "INACTIVE": "Inactif",
+      "SUSPENDED": "Suspendu",
+      "RESIGNED": "Démissionné",
+      "TERM_ENDED": "Mandat terminé"
+    },
+    "tabs": {
+      "bio": "Biographie",
+      "promises": "Promesses",
+      "legalCases": "Affaires judiciaires",
+      "meetings": "Réunions"
+    },
+    "termStart": "Début du mandat",
+    "termEnd": "Fin du mandat",
+    "party": "Parti politique"
+  },
+  "promises": {
+    "title": "Suivi des promesses",
+    "categories": {
+      "INFRASTRUCTURE": "Infrastructure",
+      "EDUCATION": "Éducation",
+      "HEALTH": "Santé",
+      "SECURITY": "Sécurité",
+      "ECONOMY": "Économie",
+      "ENVIRONMENT": "Environnement",
+      "GOVERNANCE": "Gouvernance",
+      "SOCIAL": "Social",
+      "OTHER": "Autre"
+    },
+    "status": {
+      "NOT_STARTED": "Non commencé",
+      "IN_PROGRESS": "En cours",
+      "KEPT": "Tenue",
+      "BROKEN": "Non tenue",
+      "COMPROMISED": "Compromise",
+      "STALLED": "Bloquée"
+    },
+    "summary": "{kept} tenues / {broken} non tenues / {pending} en attente",
+    "noPromises": "Aucune promesse enregistrée"
+  },
+  "legal": {
+    "title": "Affaires judiciaires",
+    "court": "Tribunal",
+    "caseNumber": "Numéro de dossier",
+    "dateFiled": "Date de dépôt",
+    "status": {
+      "ALLEGED": "Allégation",
+      "UNDER_INVESTIGATION": "Sous enquête",
+      "CHARGED": "Inculpé",
+      "TRIAL": "Procès",
+      "CONVICTED": "Condamné",
+      "ACQUITTED": "Acquitté",
+      "DISMISSED": "Classé",
+      "APPEAL": "Appel"
+    },
+    "noCases": "Aucune affaire judiciaire enregistrée"
+  },
+  "meetings": {
+    "title": "Ordre du jour des réunions",
+    "date": "Date",
+    "location": "Lieu",
+    "agenda": "Ordre du jour",
+    "noMeetings": "Aucune réunion enregistrée"
+  },
+  "elections": {
+    "title": "Élections",
+    "upcoming": "À venir",
+    "active": "En cours",
+    "completed": "Terminées",
+    "cancelled": "Annulées",
+    "compare": "Comparer les candidats",
+    "selectCandidates": "Sélectionnez des candidats à comparer",
+    "types": {
+      "PRESIDENTIAL": "Présidentielle",
+      "LEGISLATIVE_SENATE": "Législative - Sénat",
+      "LEGISLATIVE_DEPUTY": "Législative - Député",
+      "MUNICIPAL": "Municipale",
+      "LOCAL_CASEC": "Locale - CASEC",
+      "LOCAL_ASEC": "Locale - ASEC"
+    },
+    "noElections": "Aucune élection enregistrée"
+  },
+  "news": {
+    "title": "Actualités",
+    "source": "Source",
+    "published": "Publié",
+    "noArticles": "Aucun article disponible",
+    "allSources": "Toutes les sources",
+    "readOriginal": "Lire l'article original"
+  }
+}
